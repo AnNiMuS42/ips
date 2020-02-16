@@ -10,6 +10,7 @@ class Versionspruefung extends IPSModule {
         $this->RegisterVariableString("AktuelleVersion", $this->Translate("Current Version"));
         $this->RegisterVariableString("VerfuegbareVersion", $this->Translate("Available Version"));
         $this->RegisterPropertyInteger("UpdateIntervall", 12);
+        $this->RegisterAttributeInteger("LastUpdate",0);
         $this->RegisterTimer("Update", 0, 'VP_UpdateVersion(' . $this->InstanceID . ');');
 
     }
@@ -38,5 +39,9 @@ class Versionspruefung extends IPSModule {
         $xml = simplexml_load_string($rawData);
         $version = $xml->channel->item->enclosure->attributes('sparkle',true)->shortVersionString;
         $this->SetValue("VerfuegbareVersion", strval($version));
+
+        $updateTime = time();
+        $this->WriteAttributeInteger("LastUpdate", $updateTime );
+        $this->UpdateFormField("UpdateLabel", "caption", "Last Update" . date('d'));
     }
 }

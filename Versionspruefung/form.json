@@ -6,6 +6,18 @@
       "caption": "Update Interval",
       "suffix": "hours"
     }
+  ],
+  "actions": [
+    {
+      "type": "Lable",
+      "name": "UpdateLabel",
+      "caption": ""
+    },
+    {
+      "type": "Button",
+      "caption": "Update",
+      "OnClick": "VP_UpdateInterval($id);"
+    }
   ]
 
 }
