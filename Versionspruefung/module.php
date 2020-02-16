@@ -17,22 +17,23 @@ class Versionspruefung extends IPSModule {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
 
-        $this->SetValue("AktuelleVersion", IPS_GetKernelVersion());
-
-        $rawData = file_get_contents('https://apt.symcon.de/dists/stable/win/binary-i386/Packages');
-        $xml = simplexml_load_string($rawData);
-        $version = $xml->channel->item->enclosure->attributes('sparkle',true)->shortVersionString;
-        $this->SetValue("VerfuegbareVersion", strval($version));
+        $this->UpdateVersion();
     }
 
     /**
      * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
      * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
      *
-     * ABC_MeineErsteEigeneFunktion($id);
+     * VP_UpdateVersion($id);
      *
      */
-    public function MeineErsteEigeneFunktion() {
-        // Selbsterstellter Code
+    public function UpdateVersion() {
+
+        $this->SetValue("AktuelleVersion", IPS_GetKernelVersion());
+
+        $rawData = file_get_contents('https://apt.symcon.de/dists/stable/win/binary-i386/Packages');
+        $xml = simplexml_load_string($rawData);
+        $version = $xml->channel->item->enclosure->attributes('sparkle',true)->shortVersionString;
+        $this->SetValue("VerfuegbareVersion", strval($version));
     }
 }
