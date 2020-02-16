@@ -9,6 +9,7 @@ class Versionspruefung extends IPSModule {
 
         $this->RegisterVariableString("AktuelleVersion", "Aktuelle Version");
         $this->RegisterVariableString("VerfuegbareVersion", "Verfügbare Version");
+        $this->RegisterTimer("Update", 10000, 'VP_UpdateVersion(' . $this->InstanceID . ');');
 
     }
 
