@@ -7,8 +7,8 @@ class Versionspruefung extends IPSModule {
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterVariableString("AktuelleVersion", "Aktuelle Version");
-        $this->RegisterVariableString("VerfuegbareVersion", "Verfügbare Version");
+        $this->RegisterVariableString("AktuelleVersion", $this->Translate("Current Version"));
+        $this->RegisterVariableString("VerfuegbareVersion", $this->Translate("Available Version"));
         $this->RegisterPropertyInteger("UpdateIntervall", 12);
         $this->RegisterTimer("Update", 0, 'VP_UpdateVersion(' . $this->InstanceID . ');');
 
