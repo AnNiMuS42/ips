@@ -9,7 +9,8 @@ class Versionspruefung extends IPSModule {
 
         $this->RegisterVariableString("AktuelleVersion", "Aktuelle Version");
         $this->RegisterVariableString("VerfuegbareVersion", "Verfügbare Version");
-        $this->RegisterTimer("Update", 10000, 'VP_UpdateVersion(' . $this->InstanceID . ');');
+        $this->RegisterPropertyInteger("UpdateIntervall", 12);
+        $this->RegisterTimer("Update", 0, 'VP_UpdateVersion(' . $this->InstanceID . ');');
 
     }
 
@@ -18,6 +19,7 @@ class Versionspruefung extends IPSModule {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
 
+        $this->SetTimerInterval("Update", $this->ReadPropertyInteger("UpdateIntervall") * 60 * 60 * 1000);
         $this->UpdateVersion();
     }
 

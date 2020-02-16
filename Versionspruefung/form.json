@@ -1,0 +1,11 @@
+{
+  "elements":[
+    {
+      "type": "NumberSpinner",
+      "name": "UpdateIntervall",
+      "caption": "Aktualisierungsintervall",
+      "suffix": "Stunden"
+    }
+  ]
+
+}
