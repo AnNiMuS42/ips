@@ -9,7 +9,7 @@
   ],
   "actions": [
     {
-      "type": "Lable",
+      "type": "Label",
       "name": "UpdateLabel",
       "caption": ""
     },
