@@ -40,7 +40,7 @@ class Versionspruefung extends IPSModule {
         $version = $xml->channel->item->enclosure->attributes('sparkle',true)->shortVersionString;
         $this->SetValue("VerfuegbareVersion", strval($version));
 
-        $updateTime = time();
+        //$updateTime = time();
        // $this->WriteAttributeInteger("LastUpdate", $updateTime );
         $this->UpdateFormField("UpdateLabel", "caption", "Last Update");
     }
