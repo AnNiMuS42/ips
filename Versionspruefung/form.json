@@ -16,7 +16,7 @@
     {
       "type": "Button",
       "caption": "Update",
-      "OnClick": "VP_UpdateInterval($id);"
+      "OnClick": "VP_UpdateVersion($id);"
     }
   ]
 }
