@@ -42,6 +42,6 @@ class Versionspruefung extends IPSModule {
 
         $updateTime = time();
         $this->WriteAttributeInteger("LastUpdate", $updateTime);
-        //$this->UpdateFormField("UpdateLabel", "caption", "Last Update:");
+        $this->UpdateFormField("UpdateLabel", "caption", "Last Update:");
     }
 }
