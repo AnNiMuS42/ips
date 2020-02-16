@@ -8,6 +8,7 @@ class Versionspruefung extends IPSModule {
         parent::Create();
 
         $this->RegisterVariableString("AktuelleVersion", "Aktuelle Version");
+        $this->RegisterVariableString("VerfuegbareVersion", "Verfügbare Version");
 
     }
 
@@ -17,6 +18,11 @@ class Versionspruefung extends IPSModule {
         parent::ApplyChanges();
 
         $this->SetValue("AktuelleVersion", IPS_GetKernelVersion());
+
+        $rawData = file_get_contents('https://apt.symcon.de/dists/stable/win/binary-i386/Packages');
+        $xml = simplexml_load_string($rawData);
+        $version = $xml->channel->item->enclosure->attributes('sparkle',true)->shortVersionString;
+        $this->SetValue("VerfuegbareVersion", strval($version));
     }
 
     /**
