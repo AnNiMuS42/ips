@@ -3,8 +3,8 @@
     {
       "type": "NumberSpinner",
       "name": "UpdateIntervall",
-      "caption": "Aktualisierungsintervall",
-      "suffix": "Stunden"
+      "caption": "Update Interval",
+      "suffix": "hours"
     }
   ]
 
