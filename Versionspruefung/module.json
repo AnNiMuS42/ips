@@ -1,0 +1,12 @@
+{
+  "id": "{EA9AB096-A7DB-6359-876A-8AB722DD0850}",
+  "name": "Fensterkontakte",
+  "type": 3,
+  "vendor": "",
+  "aliases":[],
+  "url": "https://www.mlr.cc",
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "FK"
+}
