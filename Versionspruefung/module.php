@@ -8,7 +8,7 @@ class Fensterkontakte extends IPSModule {
         parent::Create();
 
         $this->RegisterPropertyString('Targets', '[]');
-
+        $this->RegisterPropertyInteger('Number', 0);
     }
 
     // Überschreibt die intere IPS_ApplyChanges($id) Funktion
@@ -16,16 +16,25 @@ class Fensterkontakte extends IPSModule {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
 
+        $targets = json_decode($this->ReadPropertyString('Targets'), true);
+        $counter =0;
+
+        foreach ($targets as $target) {
+            $counter++;
+        }
+
+        $this->SetValue("Number", $counter);
+
     }
 
     /**
      * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
      * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
      *
-     * ABC_MeineErsteEigeneFunktion($id);
+     * ANM_FK_countwindows($id);
      *
      */
-    public function MeineErsteEigeneFunktion() {
+    public function countwindows() {
         // Selbsterstellter Code
     }
 }
