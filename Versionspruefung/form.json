@@ -1,66 +1,28 @@
 {
   "elements":
   [
-    ... //Hier Formularfelder einfügen
+    { "type": "ValidationTextBox", "name": "Username", "caption": "Username" },
+    { "type": "ValidationTextBox", "name": "Password", "caption": "Password" },
+    { "type": "NumberSpinner", "name": "APIID", "caption": "APIID" },
+    { "type": "ValidationTextBox", "name": "Sender", "caption": "Sender" },
+    { "type": "Select", "name": "SMSType", "caption": "Type",
+      "options": [
+        { "label": "SMS", "value": 0 },
+        { "label": "Combi-SMS", "value": 1 },
+        { "label": "MMS", "value": 2 }
+      ]}
   ],
   "actions":
   [
-    "type": "Tree",
-    "name": "Devices",
-    "caption": "Devices",
-    "rowCount": 5,
-    "add": true,
-    "delete": true,
-    "sort": {
-    "column": "Name",
-    "direction": "ascending"
-  },
-    "columns": [{
-    "caption": "InstanceID",
-    "name": "InstanceID",
-    "width": "75px",
-    "add": 0,
-    "edit": {
-      "type": "SelectInstance"
-    }
-  }, {
-    "caption": "Name",
-    "name": "Name",
-    "width": "auto",
-    "add": ""
-  }, {
-    "caption": "State",
-    "name": "State",
-    "width": "40px",
-    "add": "New!"
-  }, {
-    "caption": "Temperature",
-    "name": "Temperature",
-    "width": "75px",
-    "add": 20.0,
-    "edit": {
-      "type": "NumberSpinner",
-      "digits": 2
-    }
-  }],
-    "values": [{
-    "id": 1,
-    "InstanceID": 0,
-    "Name": "Kategorie",
-    "State": "",
-    "Temperature": 0
-  },{
-    "id": 2,
-    "parent": 1,
-    "InstanceID": 12435,
-    "Name": "ABCD",
-    "State": "OK!",
-    "Temperature": 23.31,
-    "rowColor": "#ff0000"
-  }]
+    { "type": "ValidationTextBox", "name": "Number", "caption": "Number" },
+    { "type": "ValidationTextBox", "name": "Message", "caption": "Message" },
+    { "type": "Button", "label": "Send Message", "onClick": "SMS_Send($id, $Number, $Message);" },
+    { "type": "Button", "label": "Read Balance", "onClick": "echo 'Balance: '.sprintf('%.2f', SMS_RequestBalance($id)).' credits';" }
   ],
   "status":
   [
-    ... //Hier Statusmeldungen einfügen
+    { "code": 102, "icon": "active", "caption": "Login information valid" },
+    { "code": 201, "icon": "error", "caption": "Authentication failed" },
+    { "code": 202, "icon": "error", "caption": "No credits left" }
   ]
 }
