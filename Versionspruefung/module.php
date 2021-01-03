@@ -15,6 +15,9 @@ class Fensterkontakte extends IPSModule {
     public function ApplyChanges() {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
+
+        $this->SetValue("Fensterkontakt","Dies ist ein Test");
+
     }
 
     /**
