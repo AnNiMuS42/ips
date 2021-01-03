@@ -1,7 +1,7 @@
 {
   "elements":
   [
-    { "type": "Tree", "name": "Test", "caption": "Test" };
+    { "type": "Tree", "name": "Test", "caption": "Test" },
   ],
   "actions":
   [
