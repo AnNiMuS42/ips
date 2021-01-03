@@ -1,9 +1,8 @@
 {
   "elements": [
-
     { "type": "Label",
       "caption": "" }
-    }
+    },
     {
       "type": "List",
       "name": "Targets",
