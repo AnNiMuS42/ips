@@ -1,7 +1,21 @@
 {
   "elements":
   [
-    { "type": "Tree", "name": "Test", "caption": "Test" }
+    {
+      "type": "Tree",
+      "name": "Test",
+      "caption": "Test",
+      "columns": [{
+        "caption": "InstanceID",
+        "name": "InstanceID",
+        "width": "75px"
+      },
+      {
+        "caption": "Name",
+        "name": "Name",
+        "width": "auto"
+      }
+    }
   ],
   "actions":
   [
