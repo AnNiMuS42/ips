@@ -7,6 +7,8 @@ class Fensterkontakte extends IPSModule {
         // Diese Zeile nicht löschen.
         parent::Create();
 
+        $this->RegisterVariableString("Fensterkontakt","Fensterkontakt");
+
     }
 
     // Überschreibt die intere IPS_ApplyChanges($id) Funktion
