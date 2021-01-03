@@ -5,7 +5,8 @@
       "type": "Tree",
       "name": "Test",
       "caption": "Test",
-      "columns": [
+      "columns":
+      [
         {
         "caption": "InstanceID",
         "name": "InstanceID",
@@ -16,6 +17,7 @@
         "name": "Name",
         "width": "auto"
         }
+      ]
     }
   ],
   "actions":
