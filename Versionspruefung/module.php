@@ -26,12 +26,12 @@ class Fensterkontakte extends IPSModule {
      */
     public function countwindows() {
 
-        $targets = json_decode($this->ReadPropertyString('Targets'));
-        $counter =0;
+        //$targets = json_decode($this->ReadPropertyString('Targets'));
+        //$counter =0;
 
-        foreach ($targets as $target) {
-            $counter+=1;
-        }
+        //foreach ($targets as $target) {
+        //    $counter+=1;
+        //}
 
         //$this->Updateformfield("test", "caption", strval($counter));
     }
