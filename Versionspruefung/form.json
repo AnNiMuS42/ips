@@ -22,6 +22,8 @@
         }
       ]
     },
-    { "type": "Button", "caption": "Test", "onClick": "" }
+   ],
+  "actions": [
+    { "type": "Button", "caption": "Test", "onClick": "ANM_FK_countwindows($id);" }
   ]
 }
