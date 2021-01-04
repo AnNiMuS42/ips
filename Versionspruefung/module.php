@@ -33,7 +33,7 @@ class Fensterkontakte extends IPSModule {
             $counter+=1;
         }
 
-        $this->Updateformfield("test", "caption", strval($counter));
+        $this->Updateformfield("Test", "caption", strval($counter));
 
     }
 }
