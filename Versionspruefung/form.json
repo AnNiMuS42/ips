@@ -24,6 +24,6 @@
     }
    ],
   "actions": [
-    { "type": "Button", "caption": "Test", "onClick": "FK_countwindows();" }
+    { "type": "Button", "caption": "Test", "onClick": "F_countwindows();" }
   ]
 }
