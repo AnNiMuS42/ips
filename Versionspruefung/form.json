@@ -12,8 +12,8 @@
       "delete": true,
       "columns": [
         {
-          "caption": "Variable",
-          "name": "VariableID",
+          "caption": "Status Fensterkontakt",
+          "name": "ID_Fensterkontakt",
           "width": "auto",
           "add": 0,
           "edit": {
@@ -21,8 +21,8 @@
           }
         },
         {
-          "caption": "Variable",
-          "name": "SetTemp",
+          "caption": "Variable Soll-Temperatur",
+          "name": "IS_SollTemp",
           "width": "auto",
           "add": 0,
           "edit": {
