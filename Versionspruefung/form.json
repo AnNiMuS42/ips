@@ -19,6 +19,15 @@
           "edit": {
             "type": "SelectVariable"
           }
+        },
+        {
+          "caption": "Variable",
+          "name": "SetTemp",
+          "width": "auto",
+          "add": 0,
+          "edit": {
+            "type": "SelectVariable"
+          }
         }
       ]
     }
