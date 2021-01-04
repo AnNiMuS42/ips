@@ -22,6 +22,6 @@
         }
       ]
     },
-    { "type": "Button", "caption": "Test", "onClick": }
+    { "type": "Button", "caption": "Test", "onClick": "" }
   ]
 }
