@@ -30,7 +30,7 @@ class Fensterkontakte extends IPSModule {
         $counter =0;
 
         foreach ($targets as $target) {
-            $counter++;
+            $counter+=1;
         }
 
         //$this->Updateformfield("test", "caption", strval($counter));
