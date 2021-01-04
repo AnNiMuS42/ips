@@ -24,7 +24,7 @@ class Fensterkontakte extends IPSModule {
      * ANM_FK_countwindows($id);
      *
      */
-    public function countwindows() {
+    public function MyTool() {
 
         //$targets = json_decode($this->ReadPropertyString('Targets'));
         //$counter =0;
