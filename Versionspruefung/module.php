@@ -15,8 +15,6 @@ class Fensterkontakte extends IPSModule {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
 
-        $this->countwindows();
-
     }
 
     /**
