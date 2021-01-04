@@ -1,7 +1,8 @@
 {
   "elements": [
     { "type": "Label",
-      "caption": ""
+      "caption": "Dies ist ein Test1",
+      "name": "Test"
     },
     {
       "type": "List",

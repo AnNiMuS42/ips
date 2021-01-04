@@ -7,8 +7,7 @@ class Fensterkontakte extends IPSModule {
         // Diese Zeile nicht löschen.
         parent::Create();
 
-        $this->RegisterPropertyInteger('Number', 0);
-        $this->RegisterPropertyString('Targets', '[]');
+        $this->RegisterAttributeString('Targets', '[]');
     }
 
     // Überschreibt die intere IPS_ApplyChanges($id) Funktion
@@ -16,14 +15,7 @@ class Fensterkontakte extends IPSModule {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
 
-        $targets = json_decode($this->ReadPropertyString('Targets'));
-        $counter =0;
-
-        foreach ($targets as $target) {
-            $counter++;
-        }
-
-        $this->SetValue('Number', $counter);
+        $this->countwindows();
 
     }
 
@@ -35,6 +27,14 @@ class Fensterkontakte extends IPSModule {
      *
      */
     public function countwindows() {
-        // Selbsterstellter Code
+
+        $targets = json_decode($this->ReadPropertyString('Targets'));
+        $counter =0;
+
+        foreach ($targets as $target) {
+            $counter++;
+        }
+
+        $this->Updateformfield("test", "caption", strval($counter));
     }
 }
